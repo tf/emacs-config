@@ -1,3 +1,4 @@
+(require 'bs)
 (add-to-list 'bs-configurations
 	     '("modified" nil nil nil
 	       (lambda (buf)
