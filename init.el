@@ -9,7 +9,3 @@
 
 (maximize-editor)
 
-
-
-
-

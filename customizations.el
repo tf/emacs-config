@@ -8,3 +8,4 @@
 (load "customizations/set-mark-before-mouse-set-point" nil t)
 (load "customizations/backup" nil t)
 (load "customizations/dired" nil t)
+(load "customizations/modes" nil t)

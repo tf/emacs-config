@@ -10,3 +10,4 @@
 
 (global-set-key (kbd "<insert>") 'dabbrev-expand)
 
+(global-set-key (kbd "C-c e") 'ebib)

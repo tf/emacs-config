@@ -7,6 +7,7 @@
 	     (abbrev-mode 1)
 	     (ispell-change-dictionary "en_GB-ize")
 	     (flyspell-mode 1)
+	     (reftex-mode)
 
 	     (define-key LaTeX-mode-map (kbd "C-<") 'TeX-insert-braces)
 	     (define-key LaTeX-mode-map  (kbd "C->") 
