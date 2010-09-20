@@ -8,4 +8,4 @@
 (load "etc" nil t)
 
 (maximize-editor)
-
+(ido-mode 1)
