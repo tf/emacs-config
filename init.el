@@ -5,7 +5,7 @@
 
 (load "vendor" nil t)
 (load "lib" nil t)
-(load "customizations" nil t)
+(load "etc" nil t)
 
 (maximize-editor)
 
