@@ -9,5 +9,3 @@
 (global-set-key (kbd "C-x g s") 'git-status)
 
 (global-set-key (kbd "<insert>") 'dabbrev-expand)
-
-(global-set-key (kbd "C-c e") 'ebib)

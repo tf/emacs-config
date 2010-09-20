@@ -9,6 +9,7 @@
 	     (flyspell-mode 1)
 	     (reftex-mode)
 
+	     (define-key LaTeX-mode-map (kbd "C-c e") 'ebib)
 	     (define-key LaTeX-mode-map (kbd "C-<") 'TeX-insert-braces)
 	     (define-key LaTeX-mode-map  (kbd "C->") 
 	       (lambda () 
