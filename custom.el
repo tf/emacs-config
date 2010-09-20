@@ -12,7 +12,6 @@
  '(confirm-kill-emacs (quote y-or-n-p))
  '(display-time-24hr-format t)
  '(font-latex-fontify-sectioning (quote color))
- '(outline-minor-mode-prefix "\\C-c\\C-o")
  '(safe-local-variable-values (quote ((TeX-master . paper)))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
