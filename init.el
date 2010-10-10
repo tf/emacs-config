@@ -11,3 +11,6 @@
 
 (maximize-editor)
 (ido-mode 1)
+
+(load "color/custom-dark" nil t)
+(color-theme-custom-dark)
