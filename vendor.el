@@ -13,5 +13,3 @@
 (autoload 'ruby-mode "vendor/ruby-mode" "Major mode for ruby files" t)
 (autoload 'run-ruby "vendor/inf-ruby" "Run an inferior Ruby process" t)
 (autoload 'yaml-mode "vendor/yaml-mode" nil t)
-
-

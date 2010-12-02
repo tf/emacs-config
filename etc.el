@@ -8,6 +8,7 @@
 (load "etc/javascript" nil t)
 (load "etc/lambda" nil t)
 (load "etc/modes" nil t)
+(load "etc/no-tabs" nil t)
 (load "etc/outline" nil t)
 (load "etc/ruby" nil t)
 (load "etc/set-mark-before-mouse-set-point" nil t)

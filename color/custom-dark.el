@@ -23,6 +23,8 @@
      (font-lock-type-face ((t (:foreground"#ffffb6"))))
      (font-lock-variable-name-face ((t (:foreground "#c6c5fe"))))
      (font-lock-constant-face ((t (:foreground "#99cc99"))))
+     (show-ws-trailing-whitespace ((t (:background "#660000"))))
+     (show-ws-tab ((t (:background "#660000"))))
      (minibuffer-prompt ((t (:foreground "#f6f3e8" :bold t))))
      (font-lock-warning-face ((t (:foreground "Red" :bold t))))
      )))
