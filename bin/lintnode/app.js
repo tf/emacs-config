@@ -31,16 +31,18 @@ var jslint_port = 3003;
 /* copied from jslint's rhino.js */
 var jslint_options = {
     bitwise: true,
+    browser: true,
     eqeqeq: true,
     immed: true,
     newcap: true,
-    nomen: true,
+    nomen: false,
     onevar: true,
-    plusplus: true,
+    plusplus: false,
     regexp: true,
     rhino: true,
     undef: true,
-    white: false
+    white: false,
+    predef: ['window']
 };
 
 var outputErrors = function (errors) {
