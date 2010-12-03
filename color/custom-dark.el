@@ -26,6 +26,8 @@
      (whitespace-trailing ((t (:background "red1"))))
      (whitespace-tab ((t (:background "red1"))))
      (whitespace-empty ((t (:background "red1"))))
+     (flymake-errline ((t (:background "red1"))))
+     (flymake-warnline ((t (:background "#00593d"))))
      (minibuffer-prompt ((t (:foreground "#f6f3e8" :bold t))))
      (font-lock-warning-face ((t (:foreground "Red" :bold t))))
      )))

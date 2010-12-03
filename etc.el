@@ -6,6 +6,7 @@
 (load "etc/global-keys" nil t)
 (load "etc/html" nil t)
 (load "etc/javascript" nil t)
+(load "etc/jslint" nil t)
 (load "etc/lambda" nil t)
 (load "etc/modes" nil t)
 (load "etc/outline" nil t)

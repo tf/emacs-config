@@ -3,4 +3,5 @@
 
 (add-hook 'espresso-mode-hook
           (lambda ()
-            (whitespace-mode 1)))
+            (whitespace-mode 1)
+            (flymake-mode t)))
