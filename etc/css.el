@@ -1,2 +1,2 @@
 
-(setq css-indent-offset 2)
+(setq-default css-indent-offset 2)
