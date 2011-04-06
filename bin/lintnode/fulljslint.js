@@ -200,7 +200,7 @@ SOFTWARE.
     i, iTunes, id, identifier,
     iframe, img, immed, implieds, in, include, indent, indexOf, indianred,
     indigo, init, input, ins, isAlpha, isApplicationRunning, isDigit,
-    isFinite, isNaN, ivory, join, jslint, json, kbd, keygen, khaki,
+    isFinite, isNaN, ivory, jasmine, join, jslint, json, kbd, keygen, khaki,
     konfabulatorVersion, label, labelled, lang, last, lavender,
     lavenderblush, lawngreen, laxbreak, lbp, led, left, legend,
     lemonchiffon, length, "letter-spacing", li, lib, lightblue, lightcoral,
@@ -248,7 +248,7 @@ SOFTWARE.
     "vertical-align", video, violet, visibility, watch, wheat, white,
     "white-space", whitesmoke, widget, width, windows, "word-spacing",
     "word-wrap", yahooCheckLogin, yahooLogin, yahooLogout, yellow,
-    yellowgreen, "z-index"
+    yellowgreen, "z-index", it, expect, spyOn, fake, describe, waits, waitsFor, runs, beforeEach, afterEach
 */
 
 // We build the application inside a function so that we produce only a single
@@ -320,6 +320,7 @@ var JSLINT = (function () {
             forin      : true, // if for in statements must filter
             fragment   : true, // if HTML fragments should be allowed
             immed      : true, // if immediate invocations must be wrapped in parens
+            jasmine    : true, // if the jasmine globals should be predefined
             laxbreak   : true, // if line breaks should not be checked
             newcap     : true, // if constructor names must be capitalized
             nomen      : true, // if names should be checked
@@ -807,6 +808,20 @@ var JSLINT = (function () {
 // widget contains the global names which are provided to a Yahoo
 // (fna Konfabulator) widget.
 
+        jasmine = {
+            describe                : true,
+            expect                  : true,
+            fake                    : true,
+            it                      : true,
+            spyOn                   : true,
+            waits                   : true,
+            runs                    : true,
+            waitsFor                : true,
+            beforeEach              : true,
+            afterEach               : true,
+            jasmine                 : true
+        },
+
         widget = {
             alert                   : true,
             animator                : true,
@@ -1016,6 +1031,9 @@ var JSLINT = (function () {
             }
             if (option.browser) {
                 combine(predefined, browser);
+            }
+            if (option.jasmine) {
+                combine(predefined, jasmine);
             }
             if (option.windows) {
                 combine(predefined, windows);
