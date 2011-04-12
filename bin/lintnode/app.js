@@ -36,7 +36,7 @@ var jslint_options = {
     immed: true,
     newcap: true,
     nomen: false,
-    onevar: true,
+    onevar: false,
     plusplus: false,
     regexp: true,
     rhino: true,
