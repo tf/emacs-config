@@ -23,7 +23,7 @@ app.configure(function () {
     app.use(require('connect-form')({keepExtensions: true}));
     app.use(express.errorHandler(
         { dumpExceptions: true, showStack: true }));
-    app.use(express.bodyDecoder());
+    app.use(express.bodyParser());
 });
 
 var jslint_port = 3003;
