@@ -8,6 +8,7 @@
 (load "vendor" nil t)
 (load "lib" nil t)
 (load "etc" nil t)
+(load "abbrevs" nil t)
 
 (maximize-editor)
 (ido-mode 1)
