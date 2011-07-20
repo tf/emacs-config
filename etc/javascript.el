@@ -8,4 +8,5 @@
             
             (whitespace-mode 1)
             (abbrev-mode 1)
+            (x-doc-paragraph-boundaries)
             (flymake-mode t)))

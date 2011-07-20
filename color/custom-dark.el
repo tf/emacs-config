@@ -24,7 +24,7 @@
      (font-lock-variable-name-face ((t (:foreground "#c6c5fe"))))
      (font-lock-constant-face ((t (:foreground "#99cc99"))))
      (whitespace-trailing ((t (:background "red1"))))
-     (whitespace-tab ((t (:background "red1"))))
+     (whitespace-tab ((t (:foreground "#888" :background "#111"))))
      (whitespace-empty ((t (:background "red1"))))
      (flymake-errline ((t (:background "red1"))))
      (flymake-warnline ((t (:background "#00593d"))))
