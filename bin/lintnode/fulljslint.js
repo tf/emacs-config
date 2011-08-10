@@ -325,7 +325,7 @@ var JSLINT = (function () {
             newcap     : true, // if constructor names must be capitalized
             nomen      : true, // if names should be checked
             on         : true, // if HTML event handlers should be allowed
-            onevar     : true, // if only one var statement per function should be allowed
+            onevar     : false, // if only one var statement per function should be allowed
             passfail   : true, // if the scan should stop on first error
             plusplus   : true, // if increment/decrement should not be allowed
             regexp     : true, // if the . should not be allowed in regexp literals
