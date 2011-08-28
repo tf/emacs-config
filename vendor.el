@@ -4,6 +4,7 @@
 
 (require 'rails-autoload)
 
+(autoload 'coffee-mode "vendor/coffee-mode" "Major mode for coffee files" t)
 (autoload 'ebib "vendor/ebib" "Ebib, a BibTeX database manager." t)
 (autoload 'espresso-mode "vendor/espresso" nil t)
 (autoload 'git-status "vendor/git" "Entry point into git-status mode." t)

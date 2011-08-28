@@ -10,6 +10,7 @@
 (load "etc" nil t)
 (load "abbrevs" nil t)
 
+(setq inhibit-splash-screen t)
 (maximize-editor)
 (ido-mode 1)
 
