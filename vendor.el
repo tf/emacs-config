@@ -18,3 +18,4 @@
 
 (autoload 'lintnode-start "vendor/flymake-jslint" nil t)
 (autoload 'flymake-jslint-init "vendor/flymake-jslint" nil t)
+(autoload 'toggle-style "vendor/toggle" nil t)
