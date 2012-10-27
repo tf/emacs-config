@@ -19,3 +19,4 @@
 (load "etc/ui" nil t)
 (load "etc/uniquify" nil t)
 (load "etc/whitespace" nil t)
+(load "etc/yaml" nil t)
