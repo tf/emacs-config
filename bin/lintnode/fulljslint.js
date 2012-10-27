@@ -200,7 +200,7 @@ SOFTWARE.
     i, iTunes, id, identifier,
     iframe, img, immed, implieds, in, include, indent, indexOf, indianred,
     indigo, init, input, ins, isAlpha, isApplicationRunning, isDigit,
-    isFinite, isNaN, ivory, jasmine, join, jslint, json, kbd, keygen, khaki,
+    isFinite, isNaN, ivory, jasmine, buster, join, jslint, json, kbd, keygen, khaki,
     konfabulatorVersion, label, labelled, lang, last, lavender,
     lavenderblush, lawngreen, laxbreak, lbp, led, left, legend,
     lemonchiffon, length, "letter-spacing", li, lib, lightblue, lightcoral,
@@ -308,8 +308,10 @@ var JSLINT = (function () {
 
         boolOptions = {
             adsafe     : true, // if ADsafe should be enforced
+            apoconfig  : true,
             bitwise    : true, // if bitwise operators should not be allowed
             browser    : true, // if the standard browser globals should be predefined
+            buster     : true,
             cap        : true, // if upper case HTML should be allowed
             css        : true, // if CSS workarounds should be tolerated
             debug      : true, // if debugger statements should be allowed
@@ -805,6 +807,22 @@ var JSLINT = (function () {
         urls,
         warnings,
 
+        apoconfig = {
+            config                  : true,
+            shared                  : true,
+            registerEffect          : true,
+            effect                  : true,
+            useAudios               : true,
+            ef                      : true,
+            trigger                 : true,
+            tap                     : true,
+            toggleClass             : true,
+            wire                    : true,
+            backface                : true,
+            episodeBundlePath       : true,
+            sharedAssetsPath        : true
+        },
+
 // widget contains the global names which are provided to a Yahoo
 // (fna Konfabulator) widget.
 
@@ -820,6 +838,17 @@ var JSLINT = (function () {
             beforeEach              : true,
             afterEach               : true,
             jasmine                 : true
+        },
+
+        buster = {
+            describe                : true,
+            expect                  : true,
+            fake                    : true,
+            it                      : true,
+            before                  : true,
+            after                   : true,
+            sinon                   : true,
+            require                 : true
         },
 
         widget = {
@@ -1034,6 +1063,12 @@ var JSLINT = (function () {
             }
             if (option.jasmine) {
                 combine(predefined, jasmine);
+            }
+            if (option.buster) {
+                combine(predefined, buster);
+            }
+            if (option.apoconfig) {
+              combine(predefined, apoconfig);
             }
             if (option.windows) {
                 combine(predefined, windows);
