@@ -14,5 +14,6 @@
 (add-to-list 'auto-mode-alist '("\\.scss$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+(add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
 
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
