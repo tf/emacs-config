@@ -13,7 +13,7 @@
 (defun add-ruby-constructor-assignment ()
   ""
   (interactive)
-  (add-ruby-constructor-assignment-named (thing-at-point 'word)))
+  (add-ruby-constructor-assignment-named (thing-at-point 'symbol)))
 
 (defun add-ruby-attr-reader-named (name)
   ""
@@ -38,7 +38,7 @@
 (defun add-ruby-attr-reader ()
   ""
   (interactive)
-  (add-ruby-attr-reader-named (thing-at-point 'word)))
+  (add-ruby-attr-reader-named (thing-at-point 'symbol)))
 
 (defun ruby-make-constructor ()
   ""
