@@ -16,6 +16,5 @@
 (autoload 'yaml-mode "vendor/yaml-mode" nil t)
 (autoload 'whitespace-mode "vendor/whitespace" nil t)
 
-(autoload 'lintnode-start "vendor/flymake-jslint" nil t)
-(autoload 'flymake-jslint-init "vendor/flymake-jslint" nil t)
+(autoload 'flymake-jshint "vendor/flymake-jshint" nil t)
 (autoload 'toggle-style "vendor/toggle" nil t)
