@@ -15,6 +15,6 @@
 (autoload 'run-ruby "vendor/inf-ruby" "Run an inferior Ruby process" t)
 (autoload 'yaml-mode "vendor/yaml-mode" nil t)
 (autoload 'whitespace-mode "vendor/whitespace" nil t)
+(autoload 'rspec-mode "vendor/rspec-mode" nil t)
 
-(autoload 'lintnode-start "vendor/flymake-jslint" nil t)
-(autoload 'flymake-jslint-init "vendor/flymake-jslint" nil t)
+(autoload 'flymake-jshint "vendor/flymake-jshint" nil t)

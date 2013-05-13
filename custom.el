@@ -12,7 +12,8 @@
  '(confirm-kill-emacs (quote y-or-n-p))
  '(display-time-24hr-format t)
  '(font-latex-fontify-sectioning (quote color))
- '(safe-local-variable-values (quote ((TeX-master . paper)))))
+ '(org-agenda-files (quote ("~/ideen.org")))
+ '(safe-local-variable-values (quote ((encoding . utf-8) (TeX-master . paper)))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
