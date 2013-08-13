@@ -12,6 +12,7 @@
 (load "etc/jslint" nil t)
 (load "etc/lambda" nil t)
 (load "etc/modes" nil t)
+(load "etc/multi-term" nil t)
 (load "etc/objc" nil t)
 (load "etc/outline" nil t)
 (load "etc/ruby" nil t)

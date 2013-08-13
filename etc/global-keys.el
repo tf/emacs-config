@@ -14,3 +14,6 @@
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 (global-set-key (kbd "C-c r") 'run-js-rake)
+
+(global-set-key (kbd "C-x t") 'multi-term-next)
+(global-set-key (kbd "C-x T") 'multi-term)
