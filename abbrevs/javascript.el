@@ -4,6 +4,8 @@
 (define-abbrev fundamental-mode-abbrev-table "desf" "" 'javascript-skeleton-jasmine-describe)
 (define-abbrev fundamental-mode-abbrev-table "itf" "" 'javascript-skeleton-jasmine-it)
 (define-abbrev fundamental-mode-abbrev-table "prp" "" 'javascript-skeleton-constr-prop)
+(define-abbrev fundamental-mode-abbrev-table "bst" "/*global describe, before, it, expect, stubbed*/" nil)
+(define-abbrev fundamental-mode-abbrev-table "glb" "/*global */" nil)
 
 (define-skeleton javascript-skeleton-class-extend
   "Insert class extend"
