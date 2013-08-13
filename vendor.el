@@ -1,6 +1,8 @@
 
 (require 'rails-autoload)
 (require 'git-commit)
+(require 'rvm)
+(require 'rspec-mode)
 
 (autoload 'multi-term "multi-term" nil t)
 (autoload 'multi-term-next "multi-term" nil t)

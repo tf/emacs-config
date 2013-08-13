@@ -36,7 +36,4 @@
               (lambda ()
                 (interactive)
                 (add-ruby-constructor-assignment)
-                (add-ruby-attr-reader)))
-            
-	    (when (rspec-buffer-is-spec-p)
-	      (hide-body))))
+                (add-ruby-attr-reader)))))
