@@ -14,6 +14,9 @@
 (maximize-editor)
 (ido-mode 1)
 
+(windmove-default-keybindings)
+(winner-mode)
+
 (load "color/custom-dark" nil t)
 (color-theme-custom-dark)
 
