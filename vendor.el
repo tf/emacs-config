@@ -1,7 +1,4 @@
 
-(load "auctex" nil t)
-(load "preview-latex.el" nil t)
-
 (require 'rails-autoload)
 
 (autoload 'multi-term "multi-term" nil t)
