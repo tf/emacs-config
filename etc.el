@@ -1,6 +1,7 @@
 (load "etc/color" nil t)
 (load "etc/backup" nil t)
 (load "etc/bs-show" nil t)
+(load "etc/compilation" nil t)
 (load "etc/css" nil t)
 (load "etc/dired" nil t)
 (load "etc/disabled" nil t)
