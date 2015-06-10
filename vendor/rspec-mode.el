@@ -488,6 +488,9 @@ Doesn't use rake, calls rspec directly."
   (and rspec-use-spring-when-possible
        (file-exists-p (concat (rspec-project-root) "tmp/spring/spring.pid"))))
 
+(defun rspec-exec-spring-p ()
+  (file-exists-p (concat (rspec-project-root) "exec/spring")))
+
 (defun rspec2-p ()
   (or (string-match "rspec" rspec-spec-command)
       (file-readable-p (concat (rspec-project-root) ".rspec"))))
@@ -507,7 +510,7 @@ Doesn't use rake, calls rspec directly."
   "Returns command line to run rspec"
   (let ((bundle-command (if (rspec-bundle-p) "bundle exec " ""))
         (zeus-command (if (rspec-zeus-p) "zeus " nil))
-        (spring-command (if (rspec-spring-p) "spring " nil)))
+        (spring-command (if (rspec-spring-p) (if (rspec-exec-spring-p) "exec/spring " "bin/spring ") nil)))
     (concat (or zeus-command spring-command bundle-command)
             (if (rspec-rake-p)
                 (concat rspec-rake-command " spec")

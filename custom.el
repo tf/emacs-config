@@ -13,7 +13,8 @@
  '(display-time-24hr-format t)
  '(font-latex-fontify-sectioning (quote color))
  '(rspec-use-rake-when-possible nil)
- '(safe-local-variable-values (quote ((TeX-master . paper)))))
+ '(safe-local-variable-values (quote ((TeX-master . paper))))
+ '(toggle-mapping-style (quote teaspoon)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

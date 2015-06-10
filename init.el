@@ -23,3 +23,4 @@
 (load "color/custom-dark" nil t)
 (color-theme-custom-dark)
 
+(put 'upcase-region 'disabled nil)

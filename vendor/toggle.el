@@ -93,6 +93,7 @@
                   ("test/integration/\\1.rb"             . "test/unit/\\1.rb")))
     (ruby-integration    . (("lib/\\1.rb"             . "test/integration/\\1_test.rb")
                             ("test/unit/\\1.rb"             . "test/integration/\\1.rb")))
+    (teaspoon   . (("app/assets/javascripts/\\1.js"             . "spec/javascripts/\\1_spec.js")))
     (js-unit   . (("src/\\1.js"             . "test/unit/\\1_test.js"))))
   "A list of (name . toggle-mapping) rules used by toggle-filename."
   :group 'toggle

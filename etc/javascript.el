@@ -6,10 +6,10 @@
           (lambda ()
             (define-key espresso-mode-map (kbd "C-c g") 'add-js-global-current-word)
 
-            (define-key espresso-mode-map (kbd "C-c t")
+            (define-key espresso-mode-map (kbd "C-c , t")
 	      (lambda ()
 		(interactive)
-		(toggle-style 'js-unit)
+		(toggle-style 'teaspoon)
 		(toggle-buffer)))
             
             (whitespace-mode 1)

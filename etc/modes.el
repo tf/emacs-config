@@ -7,6 +7,8 @@
 (add-to-list 'auto-mode-alist '("/Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("/Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("/Guardfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("/Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("/Cheffile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("/.autotest$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.arb$" . ruby-mode))
@@ -16,5 +18,6 @@
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs" . html-mode))
 
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
