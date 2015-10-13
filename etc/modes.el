@@ -1,5 +1,5 @@
 
-(add-to-list 'auto-mode-alist '("\\.js\\'" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))
@@ -19,5 +19,6 @@
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))

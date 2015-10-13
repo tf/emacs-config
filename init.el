@@ -2,6 +2,14 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 (add-to-list 'load-path "~/.emacs.d/vendor/rails-reloaded")
 
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("melpa" . "http://melpa.org/packages/")
+   t)
+  (package-initialize))
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file nil t)
 

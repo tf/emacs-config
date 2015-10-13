@@ -16,4 +16,4 @@
             (abbrev-mode 1)
             (x-doc-paragraph-boundaries)
             (flymake-jshint)
-            (flymake-mode t)))
+            (flymake-mode 0)))
