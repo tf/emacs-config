@@ -2,10 +2,10 @@
 (require 'rails-autoload)
 (require 'git-commit)
 (require 'rvm)
-(require 'rspec-mode)
+;; (require 'rspec-mode)
 
-(autoload 'multi-term "multi-term" nil t)
-(autoload 'multi-term-next "multi-term" nil t)
+;; (autoload 'multi-term "multi-term" nil t)
+;; (autoload 'multi-term-next "multi-term" nil t)
 
 (autoload 'coffee-mode "vendor/coffee-mode" "Major mode for coffee files" t)
 (autoload 'ebib "vendor/ebib" "Ebib, a BibTeX database manager." t)

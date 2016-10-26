@@ -12,7 +12,10 @@
  '(confirm-kill-emacs (quote y-or-n-p))
  '(display-time-24hr-format t)
  '(font-latex-fontify-sectioning (quote color))
+ '(rspec-spec-command "bin/rspec")
+ '(rspec-use-bundler-when-possible nil)
  '(rspec-use-rake-when-possible nil)
+ '(rspec-use-spring-when-possible nil)
  '(safe-local-variable-values (quote ((TeX-master . paper))))
  '(toggle-mapping-style (quote teaspoon)))
 (custom-set-faces
