@@ -6,6 +6,11 @@
   (whitespace-mode 1)
   (define-key web-mode-map (kbd "C-c C-w") 'delete-trailing-whitespace)
 
+  (define-key web-mode-map (kbd "C-c , t")
+    (lambda ()
+      (interactive)
+      (toggle-style 'js-spec)
+      (toggle-buffer)))
 
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)

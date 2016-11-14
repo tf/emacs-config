@@ -489,7 +489,7 @@ Doesn't use rake, calls rspec directly."
        (file-exists-p (concat (rspec-project-root) "tmp/spring/spring.pid"))))
 
 (defun rspec-exec-spring-p ()
-  (file-exists-p (concat (rspec-project-root) "exec/spring")))
+  (file-exists-p (concat (rspec-project-root) "bin/spring")))
 
 (defun rspec2-p ()
   (or (string-match "rspec" rspec-spec-command)

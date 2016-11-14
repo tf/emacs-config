@@ -5,13 +5,14 @@
 ;; Author: Ryan Davis <ryand-ruby@zenspider.com>
 ;; Version 1.3.1
 ;; Keywords: files, extensions, convenience
+;; Package-Version: 20160331.100
 ;; Created: 2006-03-22
 ;; Compatibility: Emacs 22, 21?
 ;; URL(en): http://seattlerb.rubyforge.org/
+;; Package-Requires: ((cl-lib "0.5"))
 
 ;;; Posted using:
-;; (setq emacs-wiki-name "RyanDavis")
-;; (wikiput-buffer "update")
+;; (emacswiki-post "toggle.el")
 
 ;;; The MIT License:
 
@@ -44,9 +45,9 @@
 ;; `toggle-mapping-styles' using the `toggle-style' function or set
 ;; your default style via the `toggle-mapping-style' variable.
 
-;; There are 4 different mapping styles in this version: zentest,
-;; rails, and ruby. Feel free to submit more and I'll incorporate
-;; them.
+;; There are 7 different mapping styles in this version: zentest,
+;; rspec, rails, ruby, objc, c, and cpp. Feel free to submit more and
+;; I'll incorporate them.
 
 ;;; Example Mapping (ruby style):
 ;;
@@ -62,7 +63,7 @@
 ;; 1.1.0 2007-03-30 Initial release to emacswiki.org. Added named styles and bidi.
 ;; 1.0.0 2006-03-22 Birfday.
 
-(require 'cl)
+(require 'cl-lib)
 
 ;; TODO:
 ;; It would also be great to be able to toggle between a model and
@@ -86,15 +87,14 @@
                 ("app/helpers/\\1.rb"     . "spec/helpers/\\1_spec.rb")))
     (rails   . (("app/controllers/\\1.rb" . "test/functional/\\1_test.rb")
                 ("app/models/\\1.rb"      . "test/unit/\\1_test.rb")
+                ("app/mailers/\\1.rb"     . "test/mailers/\\1_test.rb")
                 ("lib/\\1.rb"             . "test/unit/test_\\1.rb")))
-    (ruby    . (("lib/\\1.rb"             . "test/unit/\\1_test.rb")
-                ("lib/\\1.rb"             . "test/integration/\\1_test.rb")))
-    (ruby-unit . (("lib/\\1.rb"             . "test/unit/\\1_test.rb")
-                  ("test/integration/\\1.rb"             . "test/unit/\\1.rb")))
-    (ruby-integration    . (("lib/\\1.rb"             . "test/integration/\\1_test.rb")
-                            ("test/unit/\\1.rb"             . "test/integration/\\1.rb")))
-    (teaspoon   . (("app/assets/javascripts/\\1.js"             . "spec/javascripts/\\1_spec.js")))
-    (js-unit   . (("src/\\1.js"             . "test/unit/\\1_test.js"))))
+    (ruby    . (("lib/\\1.rb"             . "test/test_\\1.rb")
+                ("\\1.rb"                 . "test_\\1.rb")))
+    (ruby2   . (("lib/\\1\\2.rb"          . "test/\\1test_\\2.rb")))
+    (objc    . (("\\1.m"                  . "\\1.h")))
+    (c       . (("\\1.c"                  . "\\1.h")))
+    (cpp     . (("\\1.cpp"                . "\\1.hpp"))))
   "A list of (name . toggle-mapping) rules used by toggle-filename."
   :group 'toggle
   :type '(repeat (cons string string)))
@@ -105,6 +105,10 @@
   :group 'toggle
   :type '(symbol))
 
+(defvar toggle-mappings nil
+  "*The current file mappings for `toggle-filename' to use.")
+
+;;;###autoload
 (defun toggle-style (name)
   (interactive (list (completing-read "Style: "
                                       (mapcar
@@ -117,23 +121,21 @@
         (let ((mappings
                (mapcar (lambda (pair)
                          (cons
-                          (replace-regexp-in-string
-                           "\\\\1" "\\\\(.*\\\\)"
-                           (replace-regexp-in-string ; special case for "\\1.ext"
-                            "^\\\\1" "\\\\([^/]*\\\\)" (car pair)))
+                          (concat
+                           (replace-regexp-in-string
+                            "\\\\[1-9]" "\\\\(.*\\\\)"
+                            (replace-regexp-in-string ; special case for "\\1.ext"
+                             "^\\\\1" "\\\\([^/]*\\\\)" (car pair))) "$")
                           (cdr pair)))
-                       (mapcan 'list
-                               pairs
-                               (mapcar (lambda (pair)
-                                         (cons (cdr pair) (car pair)))
-                                       pairs)))))
-          (if (interactive-p)
+                       (cl-mapcan 'list
+                                  pairs
+                                  (mapcar (lambda (pair)
+                                            (cons (cdr pair) (car pair)))
+                                          pairs)))))
+          (if (called-interactively-p 'interactive)
               (setq toggle-mappings mappings)
-            (setq toggle-mappings mappings)))
+            mappings))
       nil)))
-
-(defvar toggle-mappings (toggle-style toggle-mapping-style)
-  "*The current file mappings for `toggle-filename' to use.")
 
 (defun toggle-filename (path rules)
   "Transform a matching subpath in PATH as given by RULES.
@@ -144,8 +146,9 @@ matches, it returns nil"
   (cond ((null rules) nil)
     ((string-match (caar rules) path)
      (replace-match (cdar rules) nil nil path))
-    (t (toggle-filename path (rest rules)))))
+    (t (toggle-filename path (cl-rest rules)))))
 
+;;;###autoload
 (defun toggle-buffer ()
   "Opens a related file to the current buffer using matching rules.
 Matches the current buffer against rules in toggle-mappings. If a
@@ -157,3 +160,5 @@ match is found, switches to that buffer."
       (message (concat "Match not found for " (buffer-file-name))))))
 
 (provide 'toggle)
+
+;;; toggle.el ends here
