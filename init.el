@@ -21,6 +21,7 @@
 (setq inhibit-splash-screen t)
 (maximize-editor)
 (ido-mode 1)
+(column-number-mode 1)
 
 (windmove-default-keybindings)
 (winner-mode)

@@ -1,6 +1,6 @@
 (setq ruby-insert-encoding-magic-comment nil)
 
-(add-hook 'ruby-mode-hook
+(add-hook 'enh-ruby-mode-hook
 	  '(lambda ()
 	    (outline-minor-mode 1)
 	    (ruby-electric-mode 1)

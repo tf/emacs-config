@@ -8,3 +8,4 @@
 (load "lib/text_objects" nil t)
 (load "lib/xdoc-fill" nil t)
 (load "lib/whitespace" nil t)
+(load "lib/workspace" nil t)
