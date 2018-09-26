@@ -1,4 +1,6 @@
 tmp/
 games/
 auto-save-list/
-tramp
+tramp/
+session*
+/ido.last
