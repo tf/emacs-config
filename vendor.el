@@ -2,6 +2,8 @@
 (require 'rails-autoload)
 (require 'git-commit)
 (require 'rvm)
+(require 'mix-format)
+
 ;; (require 'rspec-mode)
 
 ;; (autoload 'multi-term "multi-term" nil t)

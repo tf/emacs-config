@@ -17,3 +17,5 @@
 
 (global-set-key (kbd "C-x t") 'multi-term-next)
 (global-set-key (kbd "C-x T") 'multi-term)
+
+(global-set-key (kbd "C-g") 'keyboard-escape-quit)

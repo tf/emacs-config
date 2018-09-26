@@ -33,15 +33,21 @@
  '(display-time-24hr-format t)
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(font-latex-fontify-sectioning (quote color))
+ '(mixfmt-mix "/usr/local/bin/mix")
+ '(package-selected-packages
+   (quote
+    (prettier-js flycheck-flow web-mode scss-mode rspec-mode multi-term markdown-mode json-mode js2-mode flycheck exec-path-from-shell enh-ruby-mode elixir-mode)))
+ '(prettier-js-args (quote ("--single-quote")))
  '(rspec-spec-command "bin/rspec")
  '(rspec-use-bundler-when-possible nil)
  '(rspec-use-rake-when-possible nil)
  '(rspec-use-spring-when-possible nil)
  '(safe-local-variable-values (quote ((TeX-master . paper))))
+ '(smerge-command-prefix "m")
  '(toggle-mapping-style (quote teaspoon)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(flycheck-warning ((t (:underline (:color "gold" :style wave))))))

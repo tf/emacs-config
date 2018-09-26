@@ -89,6 +89,7 @@
                 ("lib/\\1.rb"             . "test/unit/test_\\1.rb")))
     (ruby    . (("lib/\\1.rb"             . "test/unit/\\1_test.rb")
                 ("lib/\\1.rb"             . "test/integration/\\1_test.rb")))
+    (elixir  . (("lib/\\1.ex"             . "test/\\1_test.exs")))
     (ruby-unit . (("lib/\\1.rb"             . "test/unit/\\1_test.rb")
                   ("test/integration/\\1.rb"             . "test/unit/\\1.rb")))
     (ruby-integration    . (("lib/\\1.rb"             . "test/integration/\\1_test.rb")

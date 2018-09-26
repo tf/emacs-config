@@ -5,6 +5,7 @@
 (load "etc/css" nil t)
 (load "etc/dired" nil t)
 (load "etc/disabled" nil t)
+(load "etc/elixir" nil t)
 (load "etc/env" nil t)
 (load "etc/flycheck" nil t)
 (load "etc/global-keys" nil t)

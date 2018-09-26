@@ -2,6 +2,8 @@
 
 (defun ensure-multi-term (new-name dir register)
   (if (get-buffer new-name)
+      (with-current-buffer new-name
+        (point-to-register register))
       (message (format "Buffer '%s' exists" new-name))
     (open-multi-term new-name dir register)))
 
@@ -58,4 +60,14 @@
   (ensure-multi-term "*pageflow Build*" "$HOME/code/gh/pageflow/node_package" ?G)
   (ensure-multi-term "*pageflow-push*" "$HOME/code/gh/pageflow-push" ?p)
   (ensure-multi-term "*pageflow-push Build*" "$HOME/code/gh/pageflow-push" ?P))
+  
+(defun init-quiz-multi-terms ()
+  (interactive)
+  (ensure-multi-term "*sq_server*" "$HOME/code/sq_server" ?s)
+  (ensure-multi-term "*sq_server/client build*" "$HOME/code/sq_server/apps/admin/assets/client" ?C)
+  (ensure-multi-term "*sq_server/qdb*" "$HOME/code/sq_server/apps/qdb" ?d)
+  (ensure-multi-term "*sq_server phx.server*" "$HOME/code/sq_server" ?S)
+  (ensure-multi-term "*sq_server/quiz_server*" "$HOME/code/sq_server/apps/quiz_server" ?q)
+  (ensure-multi-term "*sq_app*" "$HOME/code/sq_app" ?a)
+  (ensure-multi-term "*sq_app build*" "$HOME/code/sq_app" ?A))
   
