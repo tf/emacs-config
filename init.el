@@ -33,3 +33,6 @@
 (color-theme-custom-dark)
 
 (put 'upcase-region 'disabled nil)
+
+
+(set-face-background 'default "undefined")

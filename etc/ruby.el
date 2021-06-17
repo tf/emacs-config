@@ -1,4 +1,5 @@
 (setq ruby-insert-encoding-magic-comment nil)
+(setq enh-ruby-add-encoding-comment-on-save nil)
 
 (add-hook 'enh-ruby-mode-hook
 	  '(lambda ()

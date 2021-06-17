@@ -7,7 +7,8 @@
   (define-key web-mode-map (kbd "C-c C-w") 'delete-trailing-whitespace)
 
   (add-to-list 'web-mode-indentation-params '("case-extra-offset" . nil))
-        
+
+  (setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?")))
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2))

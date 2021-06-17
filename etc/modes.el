@@ -20,6 +20,7 @@
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.arb$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.hbs$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))

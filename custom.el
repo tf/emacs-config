@@ -34,9 +34,10 @@
  '(flycheck-check-syntax-automatically (quote (save mode-enabled)))
  '(font-latex-fontify-sectioning (quote color))
  '(mixfmt-mix "/usr/local/bin/mix")
+ '(org-agenda-files (quote ("~/Dokumente/pageflow.org")))
  '(package-selected-packages
    (quote
-    (prettier-js flycheck-flow web-mode scss-mode rspec-mode multi-term markdown-mode json-mode js2-mode flycheck exec-path-from-shell enh-ruby-mode elixir-mode)))
+    (color-theme company tide prettier-js flycheck-flow web-mode scss-mode rspec-mode multi-term markdown-mode json-mode js2-mode flycheck exec-path-from-shell enh-ruby-mode elixir-mode)))
  '(prettier-js-args (quote ("--single-quote")))
  '(rspec-spec-command "bin/rspec")
  '(rspec-use-bundler-when-possible nil)

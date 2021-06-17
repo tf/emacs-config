@@ -19,3 +19,10 @@
 (global-set-key (kbd "C-x T") 'multi-term)
 
 (global-set-key (kbd "C-g") 'keyboard-escape-quit)
+
+(global-set-key (kbd "C-c C") 'redmine-current-issue)
+
+
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
